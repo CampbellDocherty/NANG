@@ -1,0 +1,6 @@
+{
+  "short_name": "frontend-fork",
+  "name": "frontend-fork",
+  "start_url": "/",
+  "display": "standalone"
+}
