@@ -15,8 +15,16 @@ describe('When a user lands on the home page', () => {
     screen.getByText('June 1st 2022');
   });
 
-  it('shows the location', () => {
-    screen.getByText('Boxpark Shoreditch, E1 6GY');
+  it('shows the venue', () => {
+    screen.getByText('Boxpark Shoreditch');
+  });
+
+  it('shows the address', () => {
+    screen.getByText('E1 6GY');
+  });
+
+  it('shows the arrow icon', () => {
+    screen.getByAltText('circle arrow to flip the cards');
   });
 
   it('shows the nang poster', () => {
