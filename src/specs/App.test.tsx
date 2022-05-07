@@ -8,6 +8,14 @@ describe('When a user lands on the home page', () => {
   });
 
   it('shows the title', () => {
-    screen.getByText('Frontend with github actions');
+    screen.getByText('NANG');
+  });
+
+  it('shows the date', () => {
+    screen.getByText('June 1st 2022');
+  });
+
+  it('shows the location', () => {
+    screen.getByText('Boxpark Shoreditch, E1 6GY');
   });
 });
