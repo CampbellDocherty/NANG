@@ -1,12 +1,20 @@
 import { FC } from 'react';
+import { posterImages } from './assets/poster-images';
+import { Grid, PartyInfo, PosterChunk } from './styles';
 
 const App: FC = () => {
   return (
-    <>
-      <h1>NANG</h1>
-      <h2>June 1st 2022</h2>
-      <h2>Boxpark Shoreditch, E1 6GY</h2>
-    </>
+    <Grid>
+      <PartyInfo>
+        <p>NANG</p>
+        <p>June 1st 2022</p>
+        <p>Boxpark Shoreditch, E1 6GY</p>
+      </PartyInfo>
+      {posterImages.map((src, index) => {
+        const alt = `nang-poster-${index + 1}`;
+        return <PosterChunk key={alt} src={src} alt={alt} />;
+      })}
+    </Grid>
   );
 };
 
