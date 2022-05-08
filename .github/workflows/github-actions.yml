@@ -2,8 +2,7 @@ name: Actions
 
 on: [push]
 
-permissions:
-  deployments: read|write
+permissions: read-all|write-all
 
 jobs:
   lint:
