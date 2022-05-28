@@ -1,3 +1,5 @@
+/* eslint-disable functional/no-let */
+
 /* eslint-disable functional/prefer-readonly-type */
 
 /* eslint-disable functional/immutable-data */
@@ -10,13 +12,22 @@ const move = (array: PartyImages[], oldIndex: number, newIndex: number) => {
   if (newIndex >= array.length) {
     newIndex = array.length - 1;
   }
-  array.splice(newIndex, 0, array.splice(oldIndex, 1)[0]);
-  return array;
+  let newArray: PartyImages[] = [];
+  array.forEach((image, index) => {
+    if (index === oldIndex) {
+      return;
+    }
+    if (index === newIndex) {
+      newArray.push(array[oldIndex]);
+    }
+    newArray.push(image);
+  });
+
+  return newArray;
 };
 
 const moveElement = (array: PartyImages[], index: number, offset: number) => {
   const newIndex = index + offset;
-
   return move(array, index, newIndex);
 };
 
@@ -35,17 +46,17 @@ export const StageOne = () => {
 
     const offset = destinationIndex - sourceIndex;
 
-    const newItems = moveElement(images, sourceIndex, offset);
-    setImages(newItems);
+    const newImages = moveElement(images, sourceIndex, offset);
+    setImages(newImages);
   };
 
   return (
     <PosterImagesList>
-      {images.map(({ src, id }, index: number) => {
-        const alt = `party-${index + 1}`;
+      {images.map(({ src, id }) => {
+        const alt = `party-${id}`;
         return (
           <DragItem
-            key={alt}
+            key={id}
             id={id}
             onMoveItem={moveItem}
             src={src}
