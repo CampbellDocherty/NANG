@@ -4,9 +4,16 @@
 
 /* eslint-disable functional/immutable-data */
 import { useEffect, useState } from 'react';
+import PartyFullImage from '../assets/party-full-image.jpg';
 import { PartyImages, partyImages } from '../assets/party-images';
+import Poster from '../assets/poster.jpg';
 import DragItem from './DragItem';
-import { PosterImagesList } from './styles';
+import {
+  ImageContainers,
+  PartyImage,
+  PosterImage,
+  PosterImagesList,
+} from './styles';
 
 const move = (array: PartyImages[], oldIndex: number, newIndex: number) => {
   if (newIndex >= array.length) {
@@ -34,6 +41,7 @@ const moveElement = (array: PartyImages[], index: number, offset: number) => {
 export const StageOne = () => {
   const [images, setImages] = useState(partyImages);
   const [stageOneComplete, setStageOneComplete] = useState(false);
+  const [transitionComplete, setTransitionComplete] = useState(false);
 
   const moveItem = (sourceId: number, destinationId: number) => {
     if (stageOneComplete) {
@@ -69,7 +77,23 @@ export const StageOne = () => {
     }
   }, [images]);
 
-  return (
+  useEffect(() => {
+    if (stageOneComplete) {
+      const timer = setTimeout(() => {
+        setTransitionComplete(true);
+      }, 2000);
+      return () => clearTimeout(timer);
+    }
+  }, [stageOneComplete]);
+
+  console.log(transitionComplete);
+
+  return true ? (
+    <ImageContainers>
+      <PartyImage src={PartyFullImage} alt="party" />
+      <PosterImage src={Poster} alt="poster" />
+    </ImageContainers>
+  ) : (
     <PosterImagesList stageOneComplete={stageOneComplete}>
       {images.map(({ src, id }) => {
         const alt = `party-${id}`;

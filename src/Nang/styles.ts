@@ -31,12 +31,37 @@ export const PosterImagesList = styled.ul<{
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(3, 1fr);
-  grid-gap: ${(props) => (props.stageOneComplete ? '0px' : '4px')};
-  border: ${(props) => (props.stageOneComplete ? '1px solid #32CD32' : 'none')};
+  grid-gap: ${(props) => (props.stageOneComplete ? '0px' : '2px')};
   grid-column: 1/4;
   grid-row: 3/6;
 
   transition: grid-gap 1s;
+`;
+
+export const PartyImage = styled.img`
+  width: 100%;
+`;
+
+export const ImageContainers = styled.div`
+  grid-column: 1/4;
+  grid-row: 3/6;
+  display: flex;
+  width: 100%;
+
+  &:hover {
+    transform: translateX(-100%);
+  }
+
+  &:hover ${PartyImage} {
+    opacity: 0;
+    transition: opacity 1s;
+  }
+
+  transition: transform 1s;
+`;
+
+export const PosterImage = styled.img`
+  width: 100%;
 `;
 
 export const StageContainer = styled.div`
