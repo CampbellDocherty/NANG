@@ -3,7 +3,7 @@
 /* eslint-disable functional/prefer-readonly-type */
 
 /* eslint-disable functional/immutable-data */
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { PartyImages, partyImages } from '../assets/party-images';
 import DragItem from './DragItem';
 import { PosterImagesList } from './styles';
@@ -33,8 +33,13 @@ const moveElement = (array: PartyImages[], index: number, offset: number) => {
 
 export const StageOne = () => {
   const [images, setImages] = useState(partyImages);
+  const [stageOneComplete, setStageOneComplete] = useState(false);
 
   const moveItem = (sourceId: number, destinationId: number) => {
+    if (stageOneComplete) {
+      return;
+    }
+
     const sourceIndex = images.findIndex((item) => item.id === sourceId);
     const destinationIndex = images.findIndex(
       (item) => item.id === destinationId
@@ -50,8 +55,22 @@ export const StageOne = () => {
     setImages(newImages);
   };
 
+  useEffect(() => {
+    const imagesInCorrectPosition = images.filter((image, index) => {
+      if (image.id === index + 1) {
+        return true;
+      }
+      return false;
+    });
+    if (imagesInCorrectPosition.length === images.length) {
+      setStageOneComplete(true);
+    } else {
+      setStageOneComplete(false);
+    }
+  }, [images]);
+
   return (
-    <PosterImagesList>
+    <PosterImagesList stageOneComplete={stageOneComplete}>
       {images.map(({ src, id }) => {
         const alt = `party-${id}`;
         return (

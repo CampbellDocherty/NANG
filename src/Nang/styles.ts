@@ -22,16 +22,21 @@ export const PartyInfo = styled.div`
   }
 `;
 
-export const PosterImagesList = styled.ul`
+export const PosterImagesList = styled.ul<{
+  readonly stageOneComplete: boolean;
+}>`
   list-style: none;
   margin: 0;
   padding: 0;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(3, 1fr);
-  grid-gap: 4px;
+  grid-gap: ${(props) => (props.stageOneComplete ? '0px' : '4px')};
+  border: ${(props) => (props.stageOneComplete ? '1px solid #32CD32' : 'none')};
   grid-column: 1/4;
   grid-row: 3/6;
+
+  transition: grid-gap 1s;
 `;
 
 export const StageContainer = styled.div`
