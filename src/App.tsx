@@ -18,12 +18,15 @@ const App: FC = () => {
   const [isStageOne, setIsStageOne] = useState(false);
 
   useEffect(() => {
-    console.log(stepOneCompleted);
     setStepOneCompleted(true);
   }, [stepOneCompleted]);
 
-  const onStageClick = () => {
-    setIsStageOne(!isStageOne);
+  const onStageOneClick = () => {
+    setIsStageOne(true);
+  };
+
+  const onStageTwoClick = () => {
+    setIsStageOne(false);
   };
 
   return (
@@ -35,10 +38,10 @@ const App: FC = () => {
         <p>E1 6GY</p>
       </PartyInfo>
       <Filler>
-        <StageNumber onClick={onStageClick} selected={isStageOne}>
+        <StageNumber onClick={onStageOneClick} selected={isStageOne}>
           1
         </StageNumber>
-        <StageNumber onClick={onStageClick} selected={!isStageOne}>
+        <StageNumber onClick={onStageTwoClick} selected={!isStageOne}>
           2
         </StageNumber>
       </Filler>
