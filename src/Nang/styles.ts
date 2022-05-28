@@ -22,7 +22,19 @@ export const PartyInfo = styled.div`
   }
 `;
 
-export const Filler = styled.div`
+export const PosterImagesList = styled.ul`
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-gap: 4px;
+  grid-column: 1/4;
+  grid-row: 3/6;
+`;
+
+export const StageContainer = styled.div`
   height: 100%;
   width: 100%;
   grid-column: 1/-1;
