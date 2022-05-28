@@ -8,14 +8,19 @@ import Party7 from './party-7.jpg';
 import Party8 from './party-8.jpg';
 import Party9 from './party-9.jpg';
 
+export interface PartyImages {
+  readonly src: string;
+  readonly id: number;
+}
+
 export const partyImages = [
-  Party4,
-  Party2,
-  Party5,
-  Party3,
-  Party1,
-  Party8,
-  Party9,
-  Party7,
-  Party6,
+  { src: Party4, id: 1 },
+  { src: Party2, id: 2 },
+  { src: Party5, id: 3 },
+  { src: Party3, id: 4 },
+  { src: Party1, id: 5 },
+  { src: Party8, id: 6 },
+  { src: Party9, id: 7 },
+  { src: Party7, id: 8 },
+  { src: Party6, id: 9 },
 ];

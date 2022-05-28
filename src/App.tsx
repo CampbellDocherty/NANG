@@ -1,4 +1,6 @@
-import { FC, useEffect, useState } from 'react';
+import { FC, useState } from 'react';
+import { DndProvider } from 'react-dnd';
+import { HTML5Backend } from 'react-dnd-html5-backend';
 import { PartyDetails } from './PartyDetails';
 import { StageOne } from './StageOne';
 import { StageTwo } from './StageTwo';
@@ -6,19 +8,16 @@ import { Stages } from './Stages';
 import { Grid } from './styles';
 
 const App: FC = () => {
-  const [stepOneCompleted, setStepOneCompleted] = useState(false);
-  const [isStageOne, setIsStageOne] = useState(false);
-
-  useEffect(() => {
-    setStepOneCompleted(true);
-  }, [stepOneCompleted]);
+  const [isStageOne, setIsStageOne] = useState(true);
 
   return (
-    <Grid>
-      <PartyDetails />
-      <Stages isStageOne={isStageOne} setIsStageOne={setIsStageOne} />
-      {isStageOne ? <StageOne /> : <StageTwo />}
-    </Grid>
+    <DndProvider backend={HTML5Backend}>
+      <Grid>
+        <PartyDetails />
+        <Stages isStageOne={isStageOne} setIsStageOne={setIsStageOne} />
+        {isStageOne ? <StageOne /> : <StageTwo />}
+      </Grid>
+    </DndProvider>
   );
 };
 
