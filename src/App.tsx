@@ -1,17 +1,16 @@
 import { FC, useEffect, useState } from 'react';
+import { PartyDetails } from './PartyDetails';
+import { Stages } from './Stages';
 import { partyImages } from './assets/party-images';
 // import { posterImages } from './assets/poster-images';
 import { ralphImages } from './assets/ralph-images';
 import {
-  Filler,
   Grid,
-  PartyInfo,
   PosterChunk,
   RalphChunk,
   RiddleContainer,
   RiddleSubtext,
   RiddleText,
-  StageNumber,
 } from './styles';
 
 const App: FC = () => {
@@ -22,30 +21,10 @@ const App: FC = () => {
     setStepOneCompleted(true);
   }, [stepOneCompleted]);
 
-  const onStageOneClick = () => {
-    setIsStageOne(true);
-  };
-
-  const onStageTwoClick = () => {
-    setIsStageOne(false);
-  };
-
   return (
     <Grid>
-      <PartyInfo>
-        <p>NANG</p>
-        <p>June 1st 2022</p>
-        <p>Boxpark Shoreditch</p>
-        <p>E1 6GY</p>
-      </PartyInfo>
-      <Filler>
-        <StageNumber onClick={onStageOneClick} selected={isStageOne}>
-          1
-        </StageNumber>
-        <StageNumber onClick={onStageTwoClick} selected={!isStageOne}>
-          2
-        </StageNumber>
-      </Filler>
+      <PartyDetails />
+      <Stages isStageOne={isStageOne} setIsStageOne={setIsStageOne} />
       {isStageOne ? (
         partyImages.map((src, index) => {
           const alt = `party-${index + 1}`;

@@ -22,7 +22,7 @@ export const PartyInfo = styled.div`
   }
 `;
 
-export const Filler = styled.div`
+export const StageContainer = styled.div`
   height: 100%;
   width: 100%;
   grid-column: 1/-1;
