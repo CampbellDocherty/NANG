@@ -1,7 +1,7 @@
 import { screen } from '@testing-library/react';
 import { render } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
-import App from '../App';
+import App from '../../App';
 
 describe('When a user lands on the home page', () => {
   beforeEach(async () => {

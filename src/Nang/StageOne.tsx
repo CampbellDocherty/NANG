@@ -4,8 +4,8 @@
 
 /* eslint-disable functional/immutable-data */
 import { useState } from 'react';
+import { PartyImages, partyImages } from '../assets/party-images';
 import DragItem from './DragItem';
-import { PartyImages, partyImages } from './assets/party-images';
 import { PosterImagesList } from './styles';
 
 const move = (array: PartyImages[], oldIndex: number, newIndex: number) => {

@@ -1,4 +1,4 @@
-import { ralphImages } from './assets/ralph-images';
+import { ralphImages } from '../assets/ralph-images';
 import {
   RalphChunk,
   RiddleContainer,
