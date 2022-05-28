@@ -1,5 +1,6 @@
 import { FC, useEffect, useState } from 'react';
-import { posterImages } from './assets/poster-images';
+import { partyImages } from './assets/party-images';
+// import { posterImages } from './assets/poster-images';
 import { ralphImages } from './assets/ralph-images';
 import {
   Filler,
@@ -46,11 +47,15 @@ const App: FC = () => {
         </StageNumber>
       </Filler>
       {isStageOne ? (
-        posterImages.map((src, index) => {
-          const alt = `nang-poster-${index + 1}`;
+        partyImages.map((src, index) => {
+          const alt = `party-${index + 1}`;
           return <PosterChunk key={alt} src={src} alt={alt} />;
         })
       ) : (
+        /* posterImages.map((src, index) => {
+          const alt = `nang-poster-${index + 1}`;
+          return <PosterChunk key={alt} src={src} alt={alt} />;
+        }) */
         <RiddleContainer>
           {ralphImages.map((src, index) => {
             const alt = `ralph-on-the-table-${index + 1}`;
