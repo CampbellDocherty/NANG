@@ -111,29 +111,20 @@ export const RalphChunk = styled.img<{ readonly isHidden: boolean }>`
 `;
 
 export const RiddleText = styled.p`
-  font-size: 16px;
-  grid-column: 1/4;
-  grid-row: 2/3;
+  font-size: 20px;
   text-align: center;
-  position: absolute;
-  z-index: 1;
 `;
 
 export const RiddleSubtext = styled.p`
   font-size: 12px;
-  grid-column: 1/4;
-  grid-row: 2/3;
   text-align: center;
-  position: absolute;
-  z-index: 1;
-  margin-left: auto;
-  margin-right: auto;
-  bottom: 0;
-  right: 0;
-  left: 0;
+
+  &:nth-of-type(3) {
+    margin: 0;
+  }
 `;
 
-export const RiddleContainer = styled.div`
+export const RalphContainer = styled.div`
   width: 100%;
   max-height: 100%;
   grid-column: 1/4;
@@ -142,4 +133,22 @@ export const RiddleContainer = styled.div`
   grid-template-columns: repeat(3, 1fr);
   grid-template-columns: repeat(3, 1fr);
   position: relative;
+`;
+
+export const RiddleContainer = styled.div`
+  grid-column: 1/4;
+  grid-row: 2/3;
+  position: absolute;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+  right: 0;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  flex-direction: column;
+  padding: 24px;
 `;

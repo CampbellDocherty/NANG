@@ -11,7 +11,6 @@ const Ralph = ({
   const [isHidden, setIsHidden] = useState(false);
 
   const onClick = () => {
-    console.log('hey');
     setIsHidden(true);
   };
   return (

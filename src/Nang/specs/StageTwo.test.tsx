@@ -13,7 +13,10 @@ describe('When a user lands on the home page', () => {
     screen.getByText(
       "What is Ralph's classic last tune to finish the dance off?"
     );
-    screen.getByText('DM @thatsnang to submit your answer');
+    screen.getByText('DM @thatsnang to submit your answer.');
+    screen.getByText(
+      'First 5 correct answers get a free double from Ralph himself!'
+    );
   });
 
   it('shows the ralph images', () => {
