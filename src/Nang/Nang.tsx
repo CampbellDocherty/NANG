@@ -3,6 +3,7 @@ import { PartyDetails } from './PartyDetails';
 import { StageOne } from './StageOne';
 import { StageTwo } from './StageTwo';
 import { Stages } from './Stages';
+import Tickets from './Tickets';
 import { Grid } from './styles';
 
 export const Nang = () => {
@@ -22,6 +23,7 @@ export const Nang = () => {
         setIsStageOne={setIsStageOne}
         stageOneComplete={stageOneComplete}
       />
+      <Tickets />
       {isStageOne ? (
         <StageOne
           stageOnePreviouslyCompleted={stageOnePreviosulyCompleted}
