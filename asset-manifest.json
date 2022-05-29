@@ -1,18 +1,19 @@
 {
   "files": {
     "main.css": "./static/css/main.38c36270.chunk.css",
-    "main.js": "./static/js/main.a118c863.chunk.js",
-    "main.js.map": "./static/js/main.a118c863.chunk.js.map",
+    "main.js": "./static/js/main.fb7b262e.chunk.js",
+    "main.js.map": "./static/js/main.fb7b262e.chunk.js.map",
     "runtime-main.js": "./static/js/runtime-main.30dbb5da.js",
     "runtime-main.js.map": "./static/js/runtime-main.30dbb5da.js.map",
-    "static/js/2.66749011.chunk.js": "./static/js/2.66749011.chunk.js",
-    "static/js/2.66749011.chunk.js.map": "./static/js/2.66749011.chunk.js.map",
+    "static/js/2.a0e5603d.chunk.js": "./static/js/2.a0e5603d.chunk.js",
+    "static/js/2.a0e5603d.chunk.js.map": "./static/js/2.a0e5603d.chunk.js.map",
     "static/js/3.0fb64855.chunk.js": "./static/js/3.0fb64855.chunk.js",
     "static/js/3.0fb64855.chunk.js.map": "./static/js/3.0fb64855.chunk.js.map",
     "index.html": "./index.html",
     "static/css/main.38c36270.chunk.css.map": "./static/css/main.38c36270.chunk.css.map",
-    "static/js/2.66749011.chunk.js.LICENSE.txt": "./static/js/2.66749011.chunk.js.LICENSE.txt",
+    "static/js/2.a0e5603d.chunk.js.LICENSE.txt": "./static/js/2.a0e5603d.chunk.js.LICENSE.txt",
     "static/media/index.css": "./static/media/Mono-Regular.11efd6d6.ttf",
+    "static/media/dice.44159ba3.png": "./static/media/dice.44159ba3.png",
     "static/media/party-1.26382cb3.jpg": "./static/media/party-1.26382cb3.jpg",
     "static/media/party-2.5b88af96.jpg": "./static/media/party-2.5b88af96.jpg",
     "static/media/party-3.acd38de8.jpg": "./static/media/party-3.acd38de8.jpg",
@@ -23,7 +24,7 @@
     "static/media/party-8.76e4abd5.jpg": "./static/media/party-8.76e4abd5.jpg",
     "static/media/party-9.5558ca0e.jpg": "./static/media/party-9.5558ca0e.jpg",
     "static/media/party-full-image.0be068e7.jpg": "./static/media/party-full-image.0be068e7.jpg",
-    "static/media/poster.655d6e94.jpg": "./static/media/poster.655d6e94.jpg",
+    "static/media/poster.3f12f053.jpg": "./static/media/poster.3f12f053.jpg",
     "static/media/ralph-1.870ff0e4.jpg": "./static/media/ralph-1.870ff0e4.jpg",
     "static/media/ralph-2.e8573b3d.jpg": "./static/media/ralph-2.e8573b3d.jpg",
     "static/media/ralph-3.5a622987.jpg": "./static/media/ralph-3.5a622987.jpg",
@@ -36,8 +37,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.30dbb5da.js",
-    "static/js/2.66749011.chunk.js",
+    "static/js/2.a0e5603d.chunk.js",
     "static/css/main.38c36270.chunk.css",
-    "static/js/main.a118c863.chunk.js"
+    "static/js/main.fb7b262e.chunk.js"
   ]
 }
