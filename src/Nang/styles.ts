@@ -3,7 +3,7 @@ import styled from 'styled-components/macro';
 export const Grid = styled.div`
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: 1fr 0.5fr 1fr 1fr 1fr;
+  grid-template-rows: 0.5fr 0.5fr 1fr 1fr 1fr;
   max-width: 600px;
   margin: 0 auto;
   max-height: 100vh;
@@ -42,6 +42,11 @@ export const PartyImage = styled.img`
   width: 100%;
 `;
 
+export const PosterImage = styled.img`
+  width: 100%;
+  opacity: 0;
+`;
+
 export const ImageContainers = styled.div`
   grid-column: 1/4;
   grid-row: 3/6;
@@ -57,11 +62,12 @@ export const ImageContainers = styled.div`
     transition: opacity 1s;
   }
 
-  transition: transform 1s;
-`;
+  &:hover ${PosterImage} {
+    opacity: 1;
+    transition: opacity 1s ease-out;
+  }
 
-export const PosterImage = styled.img`
-  width: 100%;
+  transition: transform 1s;
 `;
 
 export const StageContainer = styled.div`
@@ -94,15 +100,12 @@ export const PosterChunk = styled.img`
   height: 100%;
 `;
 
-export const RalphChunk = styled.img`
+export const RalphChunk = styled.img<{ readonly isHidden: boolean }>`
   width: 100%;
   height: 100%;
   cursor: pointer;
   z-index: 2;
-  &:hover,
-  &:active {
-    opacity: 0;
-  }
+  opacity: ${(props) => (props.isHidden ? 0 : 1)};
 
   transition: opacity 0.5s;
 `;

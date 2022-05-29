@@ -86,9 +86,7 @@ export const StageOne = () => {
     }
   }, [stageOneComplete]);
 
-  console.log(transitionComplete);
-
-  return true ? (
+  return transitionComplete ? (
     <ImageContainers>
       <PartyImage src={PartyFullImage} alt="party" />
       <PosterImage src={Poster} alt="poster" />
