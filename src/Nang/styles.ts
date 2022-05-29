@@ -30,14 +30,17 @@ export const PosterImagesList = styled.ul<{
   list-style: none;
   margin: 0;
   padding: 0;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(3, 1fr);
-  grid-gap: ${(props) => (props.stageOneComplete ? '0px' : '2px')};
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
   grid-column: 1/4;
-  grid-row: 3/6;
 
-  transition: grid-gap 1s;
+  & > img {
+    border: ${(props) => (props.stageOneComplete ? 'none' : '2px solid black')};
+    width: 33.3%;
+    transition: border 1s;
+  }
 `;
 
 export const PartyImage = styled.img<{ readonly partyImageHidden: boolean }>`
@@ -111,7 +114,7 @@ export const StageNumber = styled.p<{ readonly selected: boolean }>`
 
 export const PosterChunk = styled.img`
   width: 100%;
-  height: 100%;
+  /* height: 100%; */
 `;
 
 export const RalphChunk = styled.img<{ readonly isHidden: boolean }>`

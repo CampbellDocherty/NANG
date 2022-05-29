@@ -37,11 +37,7 @@ const DragItem = ({ id, onMoveItem, src, alt }: DraggableItem) => {
   const opacity = isDragging ? 0.5 : 1;
   const containerStyle = { opacity };
 
-  return (
-    <li ref={ref} key={alt} style={containerStyle}>
-      <PosterChunk src={src} alt={alt} />
-    </li>
-  );
+  return <PosterChunk ref={ref} src={src} alt={alt} style={containerStyle} />;
 };
 
 export default DragItem;
