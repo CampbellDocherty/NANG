@@ -61,30 +61,10 @@ export const StageOne = ({
     }
   }, [stageOneComplete]);
 
-  // const [firstImageIndex, setFirstImageIndex] = useState<number | null>(null);
-
-  // const onChunkClick = (index: number) => {
-  //   if (!firstImageIndex) {
-  //     setFirstImageIndex(index);
-  //     return;
-  //   }
-
-  //   moveElement(images, firstImageIndex, index);
-  //   setFirstImageIndex(null);
-  // };
-
   return transitionComplete || stageOnePreviouslyCompleted ? (
     <CompletePartyImage />
   ) : (
     <PosterImagesList stageOneComplete={stageOneComplete}>
-      {/* {images.map(({ src, id }, index) => {
-        const alt = `party-${id}`;
-        return (
-          <li key={alt} onClick={() => onChunkClick(index)}>
-            <PosterChunk src={src} alt={alt} />
-          </li>
-        );
-      })} */}
       {images.map(({ src, id }) => {
         const alt = `party-${id}`;
         return (
