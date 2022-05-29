@@ -164,3 +164,31 @@ export const RiddleContainer = styled.div`
   flex-direction: column;
   padding: 24px;
 `;
+
+export const TicketsList = styled.div`
+  display: flex;
+  flex-direction: column;
+  grid-column: 3/4;
+  grid-row: 1/2;
+  justify-self: flex-end;
+  align-items: flex-end;
+`;
+
+export const LinkContainer = styled.div`
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+`;
+
+export const DiceImage = styled.img`
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  margin-right: 16px;
+`;
+
+export const EventbriteImage = styled.img`
+  width: 38px;
+  height: 38px;
+  cursor: pointer;
+`;
