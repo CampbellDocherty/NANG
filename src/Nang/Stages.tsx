@@ -4,17 +4,19 @@ export const Stages = ({
   isStageOne,
   setIsStageOne,
   stageOneComplete,
+  stageOnePreviouslyCompleted,
 }: {
   readonly isStageOne: boolean;
   readonly setIsStageOne: React.Dispatch<React.SetStateAction<boolean>>;
   readonly stageOneComplete: boolean;
+  readonly stageOnePreviouslyCompleted: boolean;
 }) => {
   const onStageOneClick = () => {
     setIsStageOne(true);
   };
 
   const onStageTwoClick = () => {
-    if (stageOneComplete) {
+    if (stageOneComplete || stageOnePreviouslyCompleted) {
       setIsStageOne(false);
     }
   };
@@ -30,9 +32,10 @@ export const Stages = ({
         </StageNumber>
       </StageNumbers>
       {isStageOne ? (
-        stageOneComplete ? (
+        stageOneComplete || stageOnePreviouslyCompleted ? (
           <HintText>
-            You've completed stage 1, when you want click 2 to move on
+            You've completed stage 1, click the image to reveal the poster and
+            when you're ready you can move to stage 2
           </HintText>
         ) : (
           <HintText>

@@ -38,36 +38,32 @@ export const PosterImagesList = styled.ul<{
   transition: grid-gap 1s;
 `;
 
-export const PartyImage = styled.img`
+export const PartyImage = styled.img<{ readonly partyImageHidden: boolean }>`
   width: 100%;
+  opacity: ${(props) => (props.partyImageHidden ? 0 : 1)};
+
+  transition: opacity 1s;
+  position: absolute;
+  top: 0;
+  left: 0;
 `;
 
-export const PosterImage = styled.img`
+export const PosterImage = styled.img<{ readonly partyImageHidden: boolean }>`
   width: 100%;
-  opacity: 0;
+  opacity: ${(props) => (props.partyImageHidden ? 1 : 0)};
+
+  transition: opacity 1s;
+  position: absolute;
+  top: 0;
+  left: 0;
 `;
 
 export const ImageContainers = styled.div`
+  position: relative;
   grid-column: 1/4;
   grid-row: 3/6;
   display: flex;
   width: 100%;
-
-  &:hover {
-    transform: translateX(-100%);
-  }
-
-  &:hover ${PartyImage} {
-    opacity: 0;
-    transition: opacity 1s;
-  }
-
-  &:hover ${PosterImage} {
-    opacity: 1;
-    transition: opacity 1s ease-out;
-  }
-
-  transition: transform 1s;
 `;
 
 export const StageContainer = styled.div`
@@ -118,7 +114,6 @@ export const PosterChunk = styled.img`
 
 export const RalphChunk = styled.img<{ readonly isHidden: boolean }>`
   width: 100%;
-  height: 100%;
   cursor: pointer;
   z-index: 2;
   opacity: ${(props) => (props.isHidden ? 0 : 1)};
@@ -142,7 +137,6 @@ export const RiddleSubtext = styled.p`
 
 export const RalphContainer = styled.div`
   width: 100%;
-  max-height: 100%;
   grid-column: 1/4;
   grid-row: 3/6;
   display: grid;

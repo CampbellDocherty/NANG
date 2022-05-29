@@ -19,7 +19,6 @@ export const StageTwo = () => {
           What is Ralph's classic last tune to finish the dance off?
         </RiddleText>
         <RiddleSubtext>DM @thatsnang to submit your answer.</RiddleSubtext>
-
         <RiddleSubtext>
           First 5 correct answers get a free double from Ralph himself!
         </RiddleSubtext>
