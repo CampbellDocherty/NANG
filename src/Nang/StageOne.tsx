@@ -38,9 +38,14 @@ const moveElement = (array: PartyImages[], index: number, offset: number) => {
   return move(array, index, newIndex);
 };
 
-export const StageOne = () => {
+export const StageOne = ({
+  stageOneComplete,
+  setStageOneComplete,
+}: {
+  readonly stageOneComplete: boolean;
+  readonly setStageOneComplete: React.Dispatch<React.SetStateAction<boolean>>;
+}) => {
   const [images, setImages] = useState(partyImages);
-  const [stageOneComplete, setStageOneComplete] = useState(false);
   const [transitionComplete, setTransitionComplete] = useState(false);
 
   const moveItem = (sourceId: number, destinationId: number) => {
@@ -75,7 +80,7 @@ export const StageOne = () => {
     } else {
       setStageOneComplete(false);
     }
-  }, [images]);
+  }, [images, setStageOneComplete]);
 
   useEffect(() => {
     if (stageOneComplete) {
