@@ -172,6 +172,11 @@ export const TicketsList = styled.div`
   grid-row: 1/2;
   justify-self: flex-end;
   align-items: flex-end;
+  margin: 16px;
+
+  & > p {
+    margin-top: 0;
+  }
 `;
 
 export const LinkContainer = styled.div`
