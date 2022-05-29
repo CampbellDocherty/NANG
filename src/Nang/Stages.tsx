@@ -1,4 +1,4 @@
-import { StageContainer, StageNumber } from './styles';
+import { HintText, StageContainer, StageNumber, StageNumbers } from './styles';
 
 export const Stages = ({
   isStageOne,
@@ -16,12 +16,23 @@ export const Stages = ({
   };
   return (
     <StageContainer>
-      <StageNumber onClick={onStageOneClick} selected={isStageOne}>
-        1
-      </StageNumber>
-      <StageNumber onClick={onStageTwoClick} selected={!isStageOne}>
-        2
-      </StageNumber>
+      <StageNumbers>
+        <StageNumber onClick={onStageOneClick} selected={isStageOne}>
+          1
+        </StageNumber>
+        <StageNumber onClick={onStageTwoClick} selected={!isStageOne}>
+          2
+        </StageNumber>
+      </StageNumbers>
+      {isStageOne ? (
+        <HintText>
+          Slide the blocks to complete the image and unlock stage 2
+        </HintText>
+      ) : (
+        <HintText>
+          Click on the image to reveal the riddle and a chance to win big
+        </HintText>
+      )}
     </StageContainer>
   );
 };

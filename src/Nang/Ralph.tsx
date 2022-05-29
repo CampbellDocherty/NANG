@@ -11,7 +11,7 @@ const Ralph = ({
   const [isHidden, setIsHidden] = useState(false);
 
   const onClick = () => {
-    setIsHidden(true);
+    setIsHidden(!isHidden);
   };
   return (
     <RalphChunk

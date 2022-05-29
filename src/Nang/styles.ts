@@ -77,6 +77,22 @@ export const StageContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
+`;
+
+export const StageNumbers = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+`;
+
+export const HintText = styled.p`
+  font-size: 12px;
+  text-align: center;
+  align-self: center;
+  padding-left: 20px;
+  padding-right: 20px;
+  opacity: 0.9;
 `;
 
 export const StageNumber = styled.p<{ readonly selected: boolean }>`
