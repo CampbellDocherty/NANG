@@ -3,11 +3,13 @@ import styled from 'styled-components/macro';
 export const Grid = styled.div`
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: 0.5fr 0.5fr 1fr 1fr 1fr;
+  grid-template-rows: 0.5fr 0.5fr 1fr 1fr 1fr 1fr;
   max-width: 600px;
   margin: 0 auto;
+  min-height: 100vh;
   max-height: 100vh;
   grid-gap: 4px;
+  overflow: hidden;
 `;
 
 export const PartyInfo = styled.div`
