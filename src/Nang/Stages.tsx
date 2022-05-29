@@ -34,7 +34,8 @@ export const Stages = ({
       {isStageOne ? (
         stageOneComplete || stageOnePreviouslyCompleted ? (
           <HintText>
-            You've completed stage 1, when you want click 2 to move on
+            You've completed stage 1, click the image to reveal the poster and
+            when you're ready you can move to stage 2
           </HintText>
         ) : (
           <HintText>
