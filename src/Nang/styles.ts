@@ -115,7 +115,7 @@ export const PosterChunk = styled.img`
 `;
 
 export const RalphChunk = styled.img<{ readonly isHidden: boolean }>`
-  width: 100%;
+  width: 33.3%;
   cursor: pointer;
   z-index: 2;
   opacity: ${(props) => (props.isHidden ? 0 : 1)};
@@ -140,10 +140,8 @@ export const RiddleSubtext = styled.p`
 export const RalphContainer = styled.div`
   width: 100%;
   grid-column: 1/4;
-  grid-row: 3/6;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-columns: repeat(3, 1fr);
+  display: flex;
+  flex-wrap: wrap;
   position: relative;
 `;
 
