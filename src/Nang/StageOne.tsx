@@ -1,36 +1,9 @@
-/* eslint-disable functional/no-let */
-
-/* eslint-disable functional/prefer-readonly-type */
-
-/* eslint-disable functional/immutable-data */
 import { useEffect, useState } from 'react';
-import { PartyImages, partyImages } from '../assets/party-images';
+import { partyImages } from '../assets/party-images';
 import { CompletePartyImage } from './CompletePartyImage';
 import DragItem from './DragItem';
+import { moveElement } from './helpers';
 import { PosterImagesList } from './styles';
-
-const move = (array: PartyImages[], oldIndex: number, newIndex: number) => {
-  if (newIndex >= array.length) {
-    newIndex = array.length - 1;
-  }
-  let newArray: PartyImages[] = [];
-  array.forEach((image, index) => {
-    if (index === oldIndex) {
-      return;
-    }
-    if (index === newIndex) {
-      newArray.push(array[oldIndex]);
-    }
-    newArray.push(image);
-  });
-
-  return newArray;
-};
-
-const moveElement = (array: PartyImages[], index: number, offset: number) => {
-  const newIndex = index + offset;
-  return move(array, index, newIndex);
-};
 
 export const StageOne = ({
   stageOneComplete,
@@ -88,10 +61,30 @@ export const StageOne = ({
     }
   }, [stageOneComplete]);
 
+  // const [firstImageIndex, setFirstImageIndex] = useState<number | null>(null);
+
+  // const onChunkClick = (index: number) => {
+  //   if (!firstImageIndex) {
+  //     setFirstImageIndex(index);
+  //     return;
+  //   }
+
+  //   moveElement(images, firstImageIndex, index);
+  //   setFirstImageIndex(null);
+  // };
+
   return transitionComplete || stageOnePreviouslyCompleted ? (
     <CompletePartyImage />
   ) : (
     <PosterImagesList stageOneComplete={stageOneComplete}>
+      {/* {images.map(({ src, id }, index) => {
+        const alt = `party-${id}`;
+        return (
+          <li key={alt} onClick={() => onChunkClick(index)}>
+            <PosterChunk src={src} alt={alt} />
+          </li>
+        );
+      })} */}
       {images.map(({ src, id }) => {
         const alt = `party-${id}`;
         return (
