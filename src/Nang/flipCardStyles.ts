@@ -7,15 +7,15 @@ export const FlipCardInner = styled.div`
   transform-style: preserve-3d;
 `;
 
-export const FlipCard = styled.div<{ readonly isComplete: boolean }>`
+export const FlipCard = styled.div`
   background-color: transparent;
   width: 100%;
   grid-column: 1/4;
   grid-row: 3/6;
   perspective: 1000px;
 
-  &:active ${FlipCardInner} {
-    transform: ${(props) => (props.isComplete ? 'rotateY(180deg)' : 'none')};
+  &:focus ${FlipCardInner} {
+    transform: rotateY(180deg);
   }
 `;
 
