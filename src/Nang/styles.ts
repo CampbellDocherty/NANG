@@ -95,6 +95,7 @@ export const HintText = styled.p`
   padding-left: 20px;
   padding-right: 20px;
   opacity: 0.9;
+  margin-bottom: 2rem;
 `;
 
 export const StageNumber = styled.p<{ readonly selected: boolean }>`
