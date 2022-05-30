@@ -10,19 +10,11 @@ export const move = (
   oldIndex: number,
   newIndex: number
 ) => {
-  if (newIndex >= array.length) {
-    newIndex = array.length - 1;
-  }
-  let newArray: PartyImages[] = [];
-  array.forEach((image, index) => {
-    if (index === oldIndex) {
-      return;
-    }
-    if (index === newIndex) {
-      newArray.push(array[oldIndex]);
-    }
-    newArray.push(image);
-  });
+  let newArray: PartyImages[] = [...array];
+  [newArray[oldIndex], newArray[newIndex]] = [
+    newArray[newIndex],
+    newArray[oldIndex],
+  ];
 
   return newArray;
 };

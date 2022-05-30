@@ -89,6 +89,7 @@ export const StageNumbers = styled.div`
 
 export const HintText = styled.p`
   font-size: 12px;
+  height: 2rem;
   text-align: center;
   align-self: center;
   padding-left: 20px;
