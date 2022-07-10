@@ -15,13 +15,9 @@ export const StageTwo = () => {
         return <Ralph key={alt} src={src} alt={alt} />;
       })}
       <RiddleContainer>
-        <RiddleText>
-          What is Ralph's classic last tune to finish the dance off?
-        </RiddleText>
+        <RiddleText>Finish off this NANG stap line 'under the...'</RiddleText>
         <RiddleSubtext>DM @thatsnang to submit your answer.</RiddleSubtext>
-        <RiddleSubtext>
-          First 5 correct answers get a free double from Ralph himself!
-        </RiddleSubtext>
+        <RiddleSubtext>First 5 correct answers get a free drink!</RiddleSubtext>
       </RiddleContainer>
     </RalphContainer>
   );

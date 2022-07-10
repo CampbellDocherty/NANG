@@ -13,14 +13,14 @@ const Tickets = () => {
       <p>Tickets</p>
       <LinkContainer>
         <a
-          href="https://dice.fm/event/wb6gg-nang-10-1st-jun-boxpark-shoreditch-london-tickets?lng=en"
+          href="https://dice.fm/event/9dkno-nang-14th-jul-boxpark-shoreditch-london-tickets"
           target="_blank"
           rel="noreferrer"
         >
           <DiceImage src={Dice} alt="dice" />
         </a>
         <a
-          href="https://www.eventbrite.co.uk/e/nang-tickets-310534305467"
+          href="https://www.eventbrite.co.uk/e/nang-tickets-310562951147"
           target="_blank"
           rel="noreferrer"
         >
