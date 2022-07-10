@@ -12,7 +12,7 @@ describe('When a user lands on the home page', () => {
   });
 
   it('shows the date', () => {
-    screen.getByText('June 1st 2022');
+    screen.getByText('July 14th 2022');
   });
 
   it('shows the venue', () => {
