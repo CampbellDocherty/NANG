@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "./static/css/main.38c36270.chunk.css",
-    "main.js": "./static/js/main.194a10f8.chunk.js",
-    "main.js.map": "./static/js/main.194a10f8.chunk.js.map",
+    "main.js": "./static/js/main.69cfac13.chunk.js",
+    "main.js.map": "./static/js/main.69cfac13.chunk.js.map",
     "runtime-main.js": "./static/js/runtime-main.5ab303ce.js",
     "runtime-main.js.map": "./static/js/runtime-main.5ab303ce.js.map",
     "static/js/2.c8b7c9b3.chunk.js": "./static/js/2.c8b7c9b3.chunk.js",
@@ -24,7 +24,7 @@
     "static/media/party-8.76e4abd5.jpg": "./static/media/party-8.76e4abd5.jpg",
     "static/media/party-9.5558ca0e.jpg": "./static/media/party-9.5558ca0e.jpg",
     "static/media/party-full-image.0be068e7.jpg": "./static/media/party-full-image.0be068e7.jpg",
-    "static/media/poster.3f12f053.jpg": "./static/media/poster.3f12f053.jpg",
+    "static/media/poster.4009496a.jpg": "./static/media/poster.4009496a.jpg",
     "static/media/ralph-1.870ff0e4.jpg": "./static/media/ralph-1.870ff0e4.jpg",
     "static/media/ralph-2.e8573b3d.jpg": "./static/media/ralph-2.e8573b3d.jpg",
     "static/media/ralph-3.5a622987.jpg": "./static/media/ralph-3.5a622987.jpg",
@@ -39,6 +39,6 @@
     "static/js/runtime-main.5ab303ce.js",
     "static/js/2.c8b7c9b3.chunk.js",
     "static/css/main.38c36270.chunk.css",
-    "static/js/main.194a10f8.chunk.js"
+    "static/js/main.69cfac13.chunk.js"
   ]
 }
